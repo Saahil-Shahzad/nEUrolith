@@ -222,6 +222,37 @@ body {
     filter: invert(1);
 }
 
+@media all and (max-width: 767px) {
+    .heroText {
+        padding: 20px 20px 20px 20px;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .heroText h1 {
+        font-size: 2em;
+    }
+
+    .heroText p {
+        font-size: 1em;
+    }
+
+    .ctaButton {
+        height: 200px;
+        width: 200px;
+        font-size: 1.5rem;
+    }
+
+    .header {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navBar {
+        grid-column: 1 / 3;
+        place-items: center;
+    }
+}
+
 @media all and (min-width: 768px) and (max-width: 1024px) {
     .servicesContainer {
         grid-template-columns: 1fr 1fr;
