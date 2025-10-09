@@ -106,9 +106,12 @@ body {
     grid-row: 2 / 3;
 }
 
-.heroSection button {
+.ctaButton {
     color: #000000;
     text-align: center;
+    text-decoration: none;
+    display: grid;
+    place-items: center;
     background-color: #FF0057;
     height: 300px;
     width: 300px;
@@ -118,13 +121,13 @@ body {
             calc(100% - 50px) 100%,
             0 100%,
             0 50px);
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight: bolder;
     border: none;
     transition: background-color 0.3s ease;
 }
 
-.heroSection button:hover {
+.ctaButton:hover {
     background-color: #00FFA8;
 }
 
