@@ -1,0 +1,237 @@
+body {
+    background-color: #00FFA8;
+    font-family: 'consolas', sans-serif;
+}
+
+.container {
+    width: 100%;
+}
+
+.header {
+    width: auto;
+    padding: 15px;
+    background-color: #000000;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header p {
+    justify-self: center;
+    align-self: center;
+    font-size: 1rem;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    clip-path: polygon(10px 0,
+            100% 0,
+            100% calc(100% - 10px),
+            calc(100% - 10px) 100%,
+            0 100%,
+            0 10px);
+}
+
+.logoContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoContainer p {
+    justify-self: start;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logoContainer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navBar {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    gap: 20px;
+}
+
+.navBar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.heroSection {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 40px;
+    margin-top: 8px;
+    background-image: url("../assets/hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    place-items: center;
+}
+
+.heroText {
+    height: auto-fit;
+    width: auto-fit;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    color: #ffffff;
+    padding: 40px 80px 40px 150px;
+    justify-items: left;
+}
+
+.heroText h1 {
+    font-size: 4em;
+    grid-row: 1 / 2;
+    color: #FF0057;
+    font-weight: bolder;
+}
+
+.heroText p {
+    font-size: 2em;
+    grid-row: 2 / 3;
+}
+
+.heroSection button {
+    color: #000000;
+    text-align: center;
+    background-color: #FF0057;
+    height: 300px;
+    width: 300px;
+    clip-path: polygon(50px 0,
+            100% 0,
+            100% calc(100% - 50px),
+            calc(100% - 50px) 100%,
+            0 100%,
+            0 50px);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.heroSection button:hover {
+    background-color: #00FFA8;
+}
+
+.servicesContainer {
+    padding: 0 30px 30px 30px;
+    margin-top: 8px;
+    width: auto;
+    background-color: #191919;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.servicesContainer>h2 {
+    color: #ffffff;
+    grid-column: 1 / -1;
+    align-self: center;
+    justify-self: center;
+}
+
+.serviceCard {
+    background-color: #000000;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    color: #ffffff;
+    justify-items: center;
+    padding: 20px;
+    clip-path: polygon(20px 0,
+            100% 0,
+            100% calc(100% - 20px),
+            calc(100% - 20px) 100%,
+            0 100%,
+            0 20px);
+    transition: transform 0.3s ease;
+}
+
+.serviceCard:hover {
+    transform: scale(1.075);
+}
+
+.serviceCard p {
+    text-align: center;
+}
+
+.serviceCard button {
+    align-self: center;
+    justify-self: center;
+    padding: 10px 10px 10px 10px;
+    border: none;
+    background-color: #FF0057;
+    color: #000000;
+    font-weight: bold;
+    clip-path: polygon(10px 0,
+            100% 0,
+            100% calc(100% - 10px),
+            calc(100% - 10px) 100%,
+            0 100%,
+            0 10px);
+    transition: background-color 0.3s ease;
+}
+
+.serviceCard button:hover {
+    background-color: #00FFA8;
+}
+
+.footer {
+    margin-top: 8px;
+    padding: 16px 16px 0px 16px;
+    width: auto;
+    background-color: #000000;
+    color: #ffffff;
+    display: grid;
+    justify-items: center;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.socials {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    gap: 15px;
+}
+
+.socials img {
+    height: 20px;
+    width: 20px;
+    filter: invert(1);
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .servicesContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (min-width: 1025px) {
+    .servicesContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .heroSection {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
